@@ -1,14 +1,22 @@
 # P1-Anal
 Primer proyecto-Análisis De Algoritmos
 
-## Integrantes:
-Brenes Maleaño Andrés Ottón 
-Fernández Jiménez Axel Alejandro
-López Saborio Iván Móises
+## Creditos
 
-## License
+Brenes Maleaño Andrés Brenes.
+
+Fernández Jiménez Axel Alejandro.
+
+Lopez Saborio Iván Móises.
+
+## Descripción #
+
+Aplicación que permite el registro de usuarios sobre avistamiento de aves en Costa Rica.
+
+## Instalación
+
 TODO
 
-## Ignore 
+## Licencia
 
 TODO
