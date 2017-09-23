@@ -25,12 +25,12 @@ def selectProducts(products, weight):
     j = len(matrix[0])-1
     selection = []
     while matrix[i][j] != 0:
-        if (products[i]+sum(selection)) <= weight:
-            selection += [products[i]]
-        
+        if matrix[i][j] == matrix[i-1][j]:
+            if (products[i]+sum(selection)) <= weight:
+                selection += [products[i]]
             i-=1
         j-=1
     return selection
 
-print(backpack(products,weight))
-#print(selectProducts(products,weight))
+#print(backpack(products,weight))
+print(selectProducts(products,weight))
