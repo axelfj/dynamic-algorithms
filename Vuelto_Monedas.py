@@ -6,6 +6,9 @@ total = 5
 vector = []
 
 def change(coins, total):
+    for i in coins:
+        if i < 0:
+            return "Can't get the change"
     for i in range(total + 1):
         vector.append(0)
         vector[0] = 1
