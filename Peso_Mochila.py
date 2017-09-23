@@ -8,6 +8,8 @@ weight = 11
 matrix = []
 
 def backpack(products, weight):
+    if not len(values) == len(products):
+        return False
     for i in range(len(products)):
         row = [x * 0 for x in range(weight + 1)]
         matrix.append(row)
@@ -20,17 +22,19 @@ def backpack(products, weight):
     return matrix[len(matrix)-1][len(matrix[0])-1]
 
 def selectProducts(products, weight):
-    backpack(products,weight)
-    i = len(matrix)-1
-    j = len(matrix[0])-1
-    selection = []
-    while matrix[i][j] != 0:
-        if matrix[i][j] == matrix[i-1][j]:
-            if (products[i]+sum(selection)) <= weight:
-                selection += [products[i]]
-            i-=1
-        j-=1
-    return selection
+    if backpack(products,weight) == False:
+        return 'Cant choose the products'
+    else:
+        i = len(matrix)-1
+        j = len(matrix[0])-1
+        selection = []
+        while matrix[i][j] != 0:
+            if matrix[i][j] == matrix[i-1][j]:
+                if (products[i]+sum(selection)) <= weight:
+                    selection += [products[i]]
+                i-=1
+            j-=1
+        return selection
 
 #print(backpack(products,weight))
 print(selectProducts(products,weight))
