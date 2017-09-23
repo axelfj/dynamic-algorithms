@@ -1,21 +1,17 @@
 from random import *
 
-x = int(randrange(0,99999))
-
+x = int(randrange(0,15))
 coins = [1,2,3]
-total = 5
+total = x
 matrix = []
 
 def change(coins, total):
+    for i in range(total + 1):
+        matrix.append(0)
+    matrix[0] = 1
     for i in range(len(coins)):
-        row = [x*0 for x in range(total+1)]
-        matrix.append(row)
-    for i in range(len(matrix)):
-        for j in range(len(matrix[0])):
-            if j >= coins[i]:
-                matrix[i][j] = coins[i] + matrix[i-1][j-coins[i]]
-            else:
-                matrix[i][j] = matrix[i-1][j]
-    return matrix[len(coins)-1][total]
+        for j in range(coins[i], total + 1):
+            matrix[j] += matrix[j - coins[i]]
+    return matrix
 
-print(change(coins,total))
+print(change(coins, total))
