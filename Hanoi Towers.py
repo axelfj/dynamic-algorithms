@@ -1,18 +1,18 @@
-# In this algorithm we have 3 towers.
-# We're going to represent each tower as a list.
-# A, B and C will be their names.
+# A, B and C are our towers. We need to formulate the way that you move all the disk from A to C.
+# The condition is, you can't put a bigger disk over a smaller.
+
 A = []
 B = []
 C = []
 
-# In the first tower we have to set the elements we want from the major to the minor.
+# We receive the height and the three towers.
+def hanoiTowers(height, A, B, C):
+    for i in range(height):
+        A.append(i+1)
+        B.append(0)
+        C.append(0)
+    A = A[::-1]
+    print(A,B,C)
 
-for i in range(1,4):
-    A.append(i)
+moveTower(5,A,B,C)
 
-A = A[::-1]
-print("We know have the first tower:", A)
-print("")
-
-# We need to send every element from A to C, using the mid tower B.
-# With the condition of not having a major element over a minor.
