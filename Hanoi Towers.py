@@ -14,5 +14,7 @@ def hanoiTowers(height, A, B, C):
     A = A[::-1]
     print(A,B,C)
 
-moveTower(5,A,B,C)
+hanoiTowers(5,A,B,C)
+
+
 

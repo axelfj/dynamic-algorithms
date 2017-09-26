@@ -3,7 +3,7 @@ from random import *
 def randomArray(x):
     array = []
     for i in range(x):
-        array.append(randint(i,x))
+        array.append(randint(i,999999))
     return array
         
 def quickSort(array):
