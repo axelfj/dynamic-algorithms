@@ -6,7 +6,7 @@ B = []
 C = []
 
 # We receive the height and the three towers.
-def hanoiTowers(height, A, B, C):
+def raiseTowers(height, A, B, C):
     for i in range(height):
         A.append(i+1)
         B.append(0)
@@ -14,7 +14,7 @@ def hanoiTowers(height, A, B, C):
     A = A[::-1]
     print(A,B,C)
 
-hanoiTowers(5,A,B,C)
+raiseTowers(5,A,B,C)
 
 
 
