@@ -10,11 +10,11 @@ def floyd(matrix):
 
     return matrix
 
-
-elements = [[0, 6, -1, 4, 7],
-            [9, 0, 7, -1, -1],
-            [-1, 5, 0, -1, 14],
-            [8, 1, -1, 0, 15],
-            [2, -1, 2, 19, 0]]
+inf = 9999
+elements = [[0, 6, inf, 4, 7],
+            [9, 0, 7, inf, inf],
+            [inf, 5, 0, inf, 14],
+            [8, 1, inf, 0, 15],
+            [2, inf, 2, 19, 0]]
 
 print(floyd(elements))
