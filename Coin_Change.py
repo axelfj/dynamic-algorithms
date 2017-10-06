@@ -17,4 +17,8 @@ def change(coins, total):
             vector[j] += vector[j - coins[i]]
     return vector[total]
 
+
+def selectCoins(coins,total):
+    return
+
 print(change(coins, total))
