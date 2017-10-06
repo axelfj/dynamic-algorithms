@@ -1,29 +1,25 @@
 from tkinter import *
 from tkinter import ttk
 
-control = Tk()
+main = Tk()
 
 # You set the window title #
-control.title('Algorithm Analize Project #1')
+main.title('Algorithm Analize Project #1')
 
 # Set the min & max values the window could have. #
-control.minsize(width=800,height=600)
-control.maxsize(width=3840,height=2160)
+main.minsize(width=800, height=600)
+main.maxsize(width=3840, height=2160)
 
 # Set the background black #
 #control.configure(background = '#40E0D0')
-
-# Create the main Screen #
-
+frame = Frame()
 # All the control Buttons #
 continueButton = Button(text = 'Continue')
-continueButton.place(anchor = height/2)
-
+continueButton.place(relx = 0.5, rely = 0.4, anchor = CENTER)
 helpButton = Button(text = 'Information')
-helpButton.place(relx = 0, rely = 0, anchor = CENTER)
-
+helpButton.place(relx = 0.5, rely = 0.5, anchor = CENTER)
 exitButton = Button(text = 'Exit')
-exitButton.place(relx = 0.5, rely = 0.5, anchor = CENTER)
+exitButton.place(relx = 0.5, rely = 0.6, anchor = CENTER)
 
-# This shows the window #
-control.mainloop()
+# This shows the mainWindow #
+main.mainloop()
