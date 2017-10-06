@@ -68,19 +68,28 @@ Button(algorithmFrame, text='N-Matrix Product', command=lambda:raise_frame(algor
 Button(algorithmFrame, text='Back', command=lambda:raise_frame(algorithmFrame, mainFrame)).pack(side=TOP, fill=X)
 
 # coinFrame #
-Label(coinFrame, text='This is the coin change algorithm.\n'
-                      'You need to say how much coins you have & the value of each.\n'
-                      '').pack()
+Label(coinFrame, text='This is a test.\n').pack()
+Button(coinFrame, text='Back', command=lambda:raise_frame(coinFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # knapsackFrame #
+Label(knapsackFrame, text='This is a test.\n').pack()
+Button(knapsackFrame, text='Back', command=lambda:raise_frame(knapsackFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # shortestpathFrame #
+Label(shortestpathFrame, text='This is a test.\n').pack()
+Button(shortestpathFrame, text='Back', command=lambda:raise_frame(shortestpathFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # hanoiFrame #
+Label(hanoiFrame, text='This is a test.\n').pack()
+Button(hanoiFrame, text='Back', command=lambda:raise_frame(hanoiFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # sortFrame #
+Label(sortFrame, text='This is a test.\n').pack()
+Button(sortFrame, text='Back', command=lambda:raise_frame(sortFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # matrixFrame #
+Label(matrixFrame, text='This is a test.\n').pack()
+Button(matrixFrame, text='Back', command=lambda:raise_frame(matrixFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 raise_frame(mainFrame,mainFrame)
 control.mainloop()
