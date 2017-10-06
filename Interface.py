@@ -76,8 +76,18 @@ Label(knapsackFrame, text='This is a test.\n').pack()
 Button(knapsackFrame, text='Back', command=lambda:raise_frame(knapsackFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # shortestpathFrame #
-Label(shortestpathFrame, text='This is a test.\n').pack()
+Label(shortestpathFrame, text='Choose between Floyd & Dijkstra.\n').pack()
+Button(shortestpathFrame, text='Floyd', command=lambda:raise_frame(shortestpathFrame, floydFrame)).pack(side=TOP, fill=X)
+Button(shortestpathFrame, text='Dijkstra', command=lambda:raise_frame(shortestpathFrame, dijkstraFrame)).pack(side=TOP, fill=X)
 Button(shortestpathFrame, text='Back', command=lambda:raise_frame(shortestpathFrame, algorithmFrame)).pack(side=TOP, fill=X)
+
+# floydFrame #
+Label(floydFrame, text='Floyd.\n').pack()
+Button(floydFrame, text='Back', command=lambda:raise_frame(floydFrame, shortestpathFrame)).pack(side=TOP, fill=X)
+
+# dijkstraFrame #
+Label(dijkstraFrame, text='Dijkstra.\n').pack()
+Button(dijkstraFrame, text='Back', command=lambda:raise_frame(dijkstraFrame, shortestpathFrame)).pack(side=TOP, fill=X)
 
 # hanoiFrame #
 Label(hanoiFrame, text='This is a test.\n').pack()
@@ -85,7 +95,27 @@ Button(hanoiFrame, text='Back', command=lambda:raise_frame(hanoiFrame, algorithm
 
 # sortFrame #
 Label(sortFrame, text='This is a test.\n').pack()
+Button(sortFrame, text='QuickSort', command=lambda:raise_frame(sortFrame, quickFrame)).pack(side=TOP, fill=X)
+Button(sortFrame, text='HeapSort', command=lambda:raise_frame(sortFrame, heapFrame)).pack(side=TOP, fill=X)
 Button(sortFrame, text='Back', command=lambda:raise_frame(sortFrame, algorithmFrame)).pack(side=TOP, fill=X)
+
+# quickSortFrame #
+Label(quickFrame, text='This is quicksort.\n').pack()
+Button(quickFrame, text='Back', command=lambda:raise_frame(quickFrame, sortFrame)).pack(side=TOP, fill=X)
+
+# heapSortFrame #
+Label(heapFrame, text='Choose max or min.\n').pack()
+Button(heapFrame, text='Max Heap', command=lambda:raise_frame(heapFrame, heapMaxFrame)).pack(side=TOP, fill=X)
+Button(heapFrame, text='Min Heap', command=lambda:raise_frame(heapFrame, heapMinFrame)).pack(side=TOP, fill=X)
+Button(heapFrame, text='Back', command=lambda:raise_frame(heapFrame, sortFrame)).pack(side=TOP, fill=X)
+
+# heapMaxFrame #
+Label(heapMaxFrame, text='HeapMax.\n').pack()
+Button(heapMaxFrame, text='Back', command=lambda:raise_frame(heapMaxFrame, heapFrame)).pack(side=TOP, fill=X)
+
+# heapMinFrame #
+Label(heapMinFrame, text='HeapMin.\n').pack()
+Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFrame)).pack(side=TOP, fill=X)
 
 # matrixFrame #
 Label(matrixFrame, text='This is a test.\n').pack()
