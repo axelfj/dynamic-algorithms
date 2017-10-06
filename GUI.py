@@ -32,9 +32,22 @@ Button(mainFrame, text='Exit', command=lambda:exit_frame()).pack(side=TOP, fill=
 Label(mainFrame, text='Thank you for using our program.').pack()
 
 # HelpFrame #
-Label(informationFrame, text='Thanks for using our program.').pack()
-Button(informationFrame, text='Back', command=lambda:raise_frame(informationFrame, mainFrame)).pack()
+Label(informationFrame, text='Program created by\n'
+                             'Brenes Maleaño Andrés Ottón.\n'
+                             'Fernández Jiménez Axel Alejandro.\n'
+                             'López Saborio Iván Móises.\n').pack(side = TOP, fill= X)
+Button(informationFrame, text='Back', command=lambda:raise_frame(informationFrame, mainFrame)).pack(side=TOP, fill=X)
 
+# AlgorithmFrame #
+Label(algorithmFrame, text='Choose your favorite algorithm.').pack()
+Button(algorithmFrame, text='Coin Change.', command=lambda:raise_frame(algorithmFrame,algorithmFrame)).pack(side=TOP, fill=X)
+Button(algorithmFrame, text='Knapsack', command=lambda:raise_frame(algorithmFrame, algorithmFrame)).pack(side=TOP, fill=X)
+Button(algorithmFrame, text='Shortest Path', command=lambda:raise_frame(algorithmFrame,algorithmFrame)).pack(side=TOP, fill=X)
+Button(algorithmFrame, text='Hanoi Towers', command=lambda:raise_frame(algorithmFrame,algorithmFrame)).pack(side=TOP, fill=X)
+Button(algorithmFrame, text='Sort Algorithms', command=lambda:raise_frame(algorithmFrame, algorithmFrame)).pack(side=TOP, fill=X)
+Button(algorithmFrame, text='N-Matrix Product', command=lambda:raise_frame(algorithmFrame, algorithmFrame)).pack(side=TOP, fill=X)
+Button(algorithmFrame, text='Back', command=lambda:raise_frame(algorithmFrame, mainFrame)).pack(side=TOP, fill=X)
+Label(algorithmFrame, text='Thank you for using our program.').pack()
 
 raise_frame(mainFrame,mainFrame)
 control.mainloop()
