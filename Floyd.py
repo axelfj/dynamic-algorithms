@@ -17,4 +17,4 @@ elements = [[0, 6, inf, 4, 7],
             [8, 1, inf, 0, 15],
             [2, inf, 2, 19, 0]]
 
-print(floyd(elements))
+#print(floyd(elements))

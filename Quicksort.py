@@ -16,4 +16,4 @@ def quickSort(array):
         return quickSort(leftValues)+[pivot]+quickSort(rightValues)
 
 array = randomArray(10)
-print(quickSort(array))
+#print(quickSort(array))

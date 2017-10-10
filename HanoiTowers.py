@@ -14,7 +14,7 @@ def raiseTowers(height, A, B, C):
     A = A[::-1]
     print(A,B,C)
 
-raiseTowers(5,A,B,C)
+#raiseTowers(5,A,B,C)
 
 
 

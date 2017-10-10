@@ -37,4 +37,4 @@ def selectProducts(products, weight):
         return selection
 
 #print(backpack(products,weight))
-print(selectProducts(products,weight))
+#print(selectProducts(products,weight))
