@@ -5,8 +5,8 @@
 
 from copy import deepcopy
 
-Values = [[30, 35], [35, 15], [15, 5], [5, 10], [10, 20], [20, 25]]
-
+# Values = [[30, 35], [35, 15], [15, 5], [5, 10], [10, 20], [20, 25]]
+Values = [[2, 3], [3, 6], [6, 4], [4, 5]]
 
 def matrixproduct(values):
     def matrixproductaux(array, i, j, route):
@@ -16,13 +16,13 @@ def matrixproduct(values):
         tempo = 0
         if i > j:
             return "x"
-        for k in range(j-1, i-1, -1):
-            temp = matrixproductaux(array, i, k, route) + matrixproductaux(array, k+1, j, route) +\
-                   array[i] * array[k+1] * array[j+1]
+        for k in range(j - 1, i - 1, -1):
+            temp = matrixproductaux(array, i, k, route) + matrixproductaux(array, k + 1, j, route) + \
+                   array[i] * array[k + 1] * array[j + 1]
 
             if temp < last:
                 last = temp
-                route[i][j] = k
+                route[i][j] = k+1
         return last
 
     cantmatrix = len(values)
@@ -38,17 +38,26 @@ def matrixproduct(values):
             matrix[i][j] = a
     return routes
 
+
 def rutas(routes):
-    cant = len(routes)
-    def rutasaux( i, j):
-        if routes[i][j] == 0 and i - j <= 1:
-            print(str(i) + "*" + str(j))
-            return
+
+    def rutasaux(i, j):
+        if routes[i][j] == 0 or (routes[i][j] == j and j - i == 1):
+            if i == j:
+                print(i)
+
+            else:
+
+                print(str(i) + "*" + str(j))
+
         else:
-            print(".")
+            #print(str(i) + '*' + str(j))
             value = routes[i][j]
-            rutasaux(value + 1, j)
-            rutasaux(i, value)
-    rutasaux(0, cant-1)
+            rutasaux(i, value - 1)
+            rutasaux(value, j)
+
+    cant = len(routes)
+    rutasaux(0, cant - 1)
+
 
 rutas(matrixproduct(Values))
