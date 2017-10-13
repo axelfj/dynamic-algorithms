@@ -5,35 +5,39 @@
 
 from copy import deepcopy
 
-Values = [[30, 35], [35, 15], [15, 5], [5, 10], [10, 20], [20, 25]]
+Values = [[5, 4], [4, 6], [6, 3], [3, 2]]
 
 
 def matrixproduct(values):
-    def matrixproductaux(array, i, j):
+    def matrixproductaux(array, i, j, route):
         if i == j:
             return 0
-        min = 100000
+        last = 100000
+        tempo = 0
         if i > j:
             return "x"
-        for k in range(i, j):
-            temp = matrixproductaux(array, i, k) + matrixproductaux(array, k+1, j)+ array[i-1] * array[k] * array[j]
+        for k in range(j-1, i-1, -1):
+            temp = matrixproductaux(array, i, k, route) + matrixproductaux(array, k+1, j, route) + array[i-1] * array[k] * array[j]
 
-            if temp < min:
-                min = temp
-        return min
-
+            if temp < last:
+                last = temp
+                print(k)
+                route[i][j] = k
+        return last
 
     cantmatrix = len(values)
     matrix = [[0 for j in range(cantmatrix)] for i in range(cantmatrix)]
     routes = deepcopy(matrix)
+
+    print(matrix, routes)
     p = [values[0][0]]
     for i in range(cantmatrix):
         p.append(values[i][1])
     for i in range(cantmatrix):
         for j in range(cantmatrix):
-            matrix[i][j] = matrixproductaux(p, i, j)
+            a= matrixproductaux(p, i, j, routes)
+            matrix[i][j] = a
+    return matrix, routes
 
-    return matrix[0][cantmatrix-1]
 
-
-#print(matrixproduct(Values))
+print(matrixproduct(Values))
