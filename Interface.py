@@ -22,17 +22,14 @@ control.title('Algorithm Analize Project #1')
 
 # Set the min & max values the window could have. #
 control.minsize(width=800, height=600)
-control.maxsize(width=800, height=600)
+control.maxsize(width=3840, height=2160)
 
 # Set the background black #
 #control.configure(background = 'black')
 
 def raise_frame(fromFrame,toFrame):
-    fromFrame.place(relx=-0.4, rely=-0.4)
-    if toFrame == algorithmFrame or toFrame == shortestpathFrame or toFrame == sortFrame:
-        toFrame.place(relx = 0.4, rely = 0.3)
-    else:
-        toFrame.place(relx=0.4, rely=0.4)
+    fromFrame.place(relx=-9, rely=-9, anchor = "center")
+    toFrame.place(relx=0.5, rely=0.5, anchor = "center")
 
 
 # First Frames #
@@ -86,8 +83,6 @@ Button(algorithmFrame, text='Back', command=lambda:raise_frame(algorithmFrame, m
 # coinFrame # CON ERRORES
 Label(coinFrame, text='Insert the coin quantity:\n').pack()
 coinQuantity = Entry(coinFrame).pack()
-Label(coinFrame, text='Insert the coins values:\n').pack()
-coinWeights = Entry(coinFrame).pack()
 Label(coinFrame, text='Insert the total value you want to achieve:\n').pack()
 totalInput = Entry(coinFrame).pack()
 Button(coinFrame, text='Execute', command=lambda:print(change(getint(coinQuantity),getint(totalInput)))).pack(side=TOP, fill=X)
@@ -115,7 +110,7 @@ Button(dijkstraFrame, text='Back', command=lambda:raise_frame(dijkstraFrame, sho
 
 
 # hanoiFrame #
-Label(hanoiFrame, text='This is a test.\n').pack()
+Label(hanoiFrame, text='Hanoi Towers.\n').pack()
 Button(hanoiFrame, text='Back', command=lambda:raise_frame(hanoiFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 
@@ -126,26 +121,26 @@ Button(sortFrame, text='HeapSort', command=lambda:raise_frame(sortFrame, heapFra
 Button(sortFrame, text='Back', command=lambda:raise_frame(sortFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # quickSortFrame #
-Label(quickFrame, text='This is quicksort.\n').pack()
+Label(quickFrame, text='QuickSort.\n').pack()
 Button(quickFrame, text='Back', command=lambda:raise_frame(quickFrame, sortFrame)).pack(side=TOP, fill=X)
 
 # heapSortFrame #
 Label(heapFrame, text='Choose max or min.\n').pack()
-Button(heapFrame, text='Max Heap', command=lambda:raise_frame(heapFrame, heapMaxFrame)).pack(side=TOP, fill=X)
-Button(heapFrame, text='Min Heap', command=lambda:raise_frame(heapFrame, heapMinFrame)).pack(side=TOP, fill=X)
+Button(heapFrame, text='Maximum Heap', command=lambda:raise_frame(heapFrame, heapMaxFrame)).pack(side=TOP, fill=X)
+Button(heapFrame, text='Minimum Heap', command=lambda:raise_frame(heapFrame, heapMinFrame)).pack(side=TOP, fill=X)
 Button(heapFrame, text='Back', command=lambda:raise_frame(heapFrame, sortFrame)).pack(side=TOP, fill=X)
 
 # heapMaxFrame #
-Label(heapMaxFrame, text='HeapMax.\n').pack()
+Label(heapMaxFrame, text='Maximum Heap.\n').pack()
 Button(heapMaxFrame, text='Back', command=lambda:raise_frame(heapMaxFrame, heapFrame)).pack(side=TOP, fill=X)
 
 # heapMinFrame #
-Label(heapMinFrame, text='HeapMin.\n').pack()
+Label(heapMinFrame, text='Minimum Heap.\n').pack()
 Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFrame)).pack(side=TOP, fill=X)
 
 
 # matrixFrame #
-Label(matrixFrame, text='This is a test.\n').pack()
+Label(matrixFrame, text='N-Matrix Chain Product.\n').pack()
 Button(matrixFrame, text='Back', command=lambda:raise_frame(matrixFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 
