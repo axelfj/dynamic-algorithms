@@ -66,7 +66,18 @@ Label(mainFrame, text='Thank you for using our program.').pack()
 Label(informationFrame, text='Program created by\n'
                              'Brenes Maleaño Andrés Ottón.\n'
                              'Fernández Jiménez Axel Alejandro.\n'
-                             'López Saborio Iván Móises.\n').pack(side = TOP, fill= X)
+                             'López Saborio Iván Móises.\n\n'
+                             'Coin change: This algorithm consist in that given a quantity of N coins (different denominations),\n '
+                             'give the coin change with the lowest quantity of coins.\n\n'
+                             'Knapsack: \n\n'
+                             'Floyd: Algorithm used to get the shortest path in a graph.\n\n'
+                             'Dijkstra: Algorithm used to get the shortest path from one node to the others in a graph.\n\n'
+                             'Hanoi Towers: Given a N number of disks, move them from one needle to another one, by just moving\n'
+                             'one disk at the time.\n\n'
+                             'Quicksort: Algorithm used to order an array of N number increasingly or decreasingly.\n\n'
+                             'HeapSort: Algorithm used to order an array of N number increasingly or decreasingly.\n\n'
+                             'Matrix Multiplication: Algorithm that given N matrices of i x j elements, calculate the minimum\n'
+                             ' number of multiplications that have to be done using the best arrange of them associatively.\n\n').pack(side = TOP, fill= X)
 Button(informationFrame, text='Back', command=lambda:raise_frame(informationFrame, mainFrame)).pack(side=TOP, fill=X)
 
 # AlgorithmFrame #

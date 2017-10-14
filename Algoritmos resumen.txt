@@ -2,7 +2,7 @@ Coin change: This algorithm consist in that given a quantity of N coins (differe
 
 Sna: algorithm used to calculate the most amount of items with X weight that can be inside a backpack with a certain amount of weigth capacity
 
-Floyd: Algorithm used to get the shortest path in a graph
+Floyd: Algorithm used to get the shortest path in a graph.
 
 Dijkstra: Algorithm used to get the shortest path from one node to the others in a graph
 
@@ -12,4 +12,4 @@ Quicksort: Algorithm used to arrange a list of N elements risingly.
 
 Heapsort: Algorithm used to arrange a list of N elements risingly.
 
-Matrix  Multiplication: Algorithm that given N matrices of i x j elements, calculate the minimum number of multiplications that have to be done using the best arrange of them associatively.
+Matrix Multiplication: Algorithm that given N matrices of i x j elements, calculate the minimum number of multiplications that have to be done using the best arrange of them associatively.

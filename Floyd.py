@@ -7,7 +7,6 @@ def floyd(matrix):
                 elif matrix[i][j] == -1:
                     if matrix[i][m] >= 0 and matrix[m][j] >= 0:
                         matrix[i][j] = matrix[i][m] + matrix[m][j]
-
     return matrix
 
 inf = 9999
