@@ -1,6 +1,6 @@
 Coin change: This algorithm consist in that given a quantity of N coins (different denominations), give the coin change  with the lowest quantity of coins
 
-Sna
+Sna: algorithm used to calculate the most amount of items with X weight that can be inside a backpack with a certain amount of weigth capacity
 
 Floyd: Algorithm used to get the shortest path in a graph
 
