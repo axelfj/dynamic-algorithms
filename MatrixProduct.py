@@ -10,6 +10,13 @@ Values = [[30, 35], [35, 15], [15, 5], [5, 10], [10, 20], [20, 25]]
 
 def matrixproduct(values):
 
+    def multiplicands(matrices):
+        for i in range(len(matrices)-1):
+            if matrices[i][1] != matrices[i+1][0]:
+                return False
+        return True
+
+
     def rutas(route):
 
         def rutasaux(i, j):
@@ -45,11 +52,14 @@ def matrixproduct(values):
         return last
         # Fin matrixproductaux
 
+    if not multiplicands(values):
+        return "Not multiplicands"
+
     cantmatrix = len(values)
     matrix = [[0 for j in range(cantmatrix)] for i in range(cantmatrix)]
     routes = deepcopy(matrix)
-    p = [values[0][0]]
 
+    p = [values[0][0]]
     for i in range(cantmatrix):
         p.append(values[i][1])
     for i in range(cantmatrix):
@@ -63,4 +73,4 @@ def matrixproduct(values):
     # Fin matrixproduct
 
 
-#print(matrixproduct(Values))
+print(matrixproduct(Values))
