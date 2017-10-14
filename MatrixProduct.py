@@ -15,20 +15,18 @@ def matrixproduct(values):
         def rutasaux(i, j):
             if route[i][j] == 0 or (route[i][j] == j and j - i == 1):
                 if i == j:
-                    print(i)
-
+                    lista.append(str(i))
                 else:
-
-                    print(str(i) + "*" + str(j))
-
+                    lista.append(str(i) + "*" + str(j))
             else:
-                # print(str(i) + '*' + str(j))
                 value = route[i][j]
                 rutasaux(i, value - 1)
                 rutasaux(value, j)
-
+            # Fin rutasaux
+        lista = []
         cant = len(route)
         rutasaux(0, cant - 1)
+        return lista
     # Fin rutas
 
     def matrixproductaux(array, i, j, route):
@@ -45,6 +43,7 @@ def matrixproduct(values):
                 last = temp
                 route[i][j] = k+1
         return last
+        # Fin matrixproductaux
 
     cantmatrix = len(values)
     matrix = [[0 for j in range(cantmatrix)] for i in range(cantmatrix)]
@@ -58,9 +57,10 @@ def matrixproduct(values):
             a = matrixproductaux(p, i, j, routes)
             matrix[i][j] = a
 
-    rutas(routes)
+    associativity = rutas(routes)
 
-    return matrix[0][cantmatrix-1]
+    return matrix[0][cantmatrix-1], associativity
+    # Fin matrixproduct
 
 
 print(matrixproduct(Values))
