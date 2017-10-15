@@ -1,28 +1,27 @@
-coins = [1,2,3,4,5,6]
 total = 11
+coins = [1,5,10,21,25]
 
-def minCoins(coins, total):
-    cols = total + 1
-    rows = len(coins)
-    T = [[0 if col == 0 else float("inf") for col in range(cols)] for _ in range(rows)]
-    for i in range(rows):
-        for j in range(1, cols):
-            if j < coins[i]:
-                T[i][j] = T[i - 1][j]
-            else:
-                T[i][j] = min(T[i - 1][j], 1 + T[i][j - coins[i]])
-    return T[rows - 1][cols - 1], selectCoins(T[rows-1],coins)
+def coinChange(coinValueList,change):
+    minCoins = [0] * (total + 1)
+    coinsUsed = [0] * (total + 1)
+    for cents in range(change+1):
+        coinCount = cents
+        newCoin = 1
+        for j in [c for c in coinValueList if c <= cents]:
+            if minCoins[cents-j] + 1 < coinCount:
+                coinCount = minCoins[cents-j]+1
+                newCoin = j
+        minCoins[cents] = coinCount
+        coinsUsed[cents] = newCoin
+    return minCoins[change], selectCoins(coinsUsed,total)
 
-def selectCoins(R, coins):
+def selectCoins(coinsUsed,total):
+    coin = total
     selection = []
-    start = len(R) - 1
-    print(R)
-    if R[start] == -1:
-        return "No Solution Possible."
-    while start >= 0:
-        coin = coins[R[start]]
-        selection += [coin]
-        start = start - coin
+    while coin > 0:
+        thisCoin = coinsUsed[coin]
+        selection += [thisCoin]
+        coin -= thisCoin
     return selection
 
-print(minCoins(coins, total))
+print(coinChange(coins,total))
