@@ -12,7 +12,7 @@ values = [1,6,18,22,28]
 weight = 11
 matrix = []
 
-def backpack(products, weight):
+def backpack(products, values, weight):
     if not len(values) == len(products):
         return False
     for i in range(len(products)):

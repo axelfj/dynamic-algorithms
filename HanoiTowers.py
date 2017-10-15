@@ -8,6 +8,7 @@ def hanoi(height):
     initTower = [i if i > 0 else i for i in range(height,0,-1)]
     finalTower = []*height
     middleTower = []*height
+    #print(initTower,middleTower,finalTower)
     def hanoiAux(height, initTower, middleTower, finalTower):
         if height > 0:
             hanoiAux(height - 1, initTower, finalTower, middleTower)
@@ -16,4 +17,4 @@ def hanoi(height):
         return initTower, middleTower, finalTower
     return hanoiAux(height,initTower,middleTower,finalTower)
 
-print(hanoi(3))
+#print(hanoi(15))
