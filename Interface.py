@@ -1,7 +1,7 @@
 # import all the py algorithms #
 
-from Backpack_Problem import *
-from Coin_Change import *
+from Knapsack import *
+from CoinChange import *
 from Dijkstra import *
 from Floyd import *
 from HanoiTowers import *

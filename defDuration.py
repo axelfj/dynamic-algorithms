@@ -1,7 +1,7 @@
 import datetime
 import sys
 
-from Backpack_Problem import *
+from Knapsack import *
 
 sys.setrecursionlimit(10000)
 
