@@ -1,4 +1,4 @@
-coins = [1,2,3,4,5,6]
+coins = [1,2,3,4]
 total = 11
 
 def minCoins(coins, total):
