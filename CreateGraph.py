@@ -19,4 +19,4 @@ def creategraph(n):
     return nodes, distances
 
 
-# print(creategraph(3))
+print(creategraph(3))

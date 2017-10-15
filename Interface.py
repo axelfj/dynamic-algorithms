@@ -99,7 +99,7 @@ Button(algorithmFrame, text='N-Matrix Product', command=lambda:raise_frame(algor
 Button(algorithmFrame, text='Back', command=lambda:raise_frame(algorithmFrame, mainFrame)).pack(side=TOP, fill=X)
 
 
-# coinFrame # CON ERRORES
+# coinFrame #
 Label(coinFrame, text='Insert the coin quantity:\n').pack()
 coinQuantity = Entry(coinFrame).pack()
 Label(coinFrame, text='Insert the total value you want to achieve:\n').pack()
