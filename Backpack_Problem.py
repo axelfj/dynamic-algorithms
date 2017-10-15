@@ -1,6 +1,11 @@
 from random import *
-
 x = int(randrange(0,99999))
+
+# This algorithm search the best value for the backpack #
+# Input: Products & Weight.
+#   Basically the products are the quantity and the weight is how much the backpack support. #
+# Output: Best Value, Selection of products.
+#   The backpack algorithm returns the best value found and the selection of products who are the most valuable.
 
 products = [1,2,3,4,5]
 values = [1,6,18,22,28]

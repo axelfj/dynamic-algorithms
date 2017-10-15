@@ -1,5 +1,11 @@
 import CreateGraph as CG
 
+# This algorithm search the minimum path from one node to another #
+# Input: nodes & init & distances.
+#   Nodes is basically the graph, init is the node you are using as the initial point and the distances are all the
+#   values between nodes. #
+# Output: visited, distances
+#   visited is the nodes you visited with the value, and the distance is to see every route between nodes. #
 
 def dijkstra(nodes, init, distances):
     unvisited = {node: None for node in nodes} #using None as +inf
@@ -19,9 +25,8 @@ def dijkstra(nodes, init, distances):
             break
         candidates = [node for node in unvisited.items() if node[1]]
         current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
-    return visited
+    return visited,distances
 
 
 node, distance = CG.creategraph(3)
-
-print(dijkstra(node, 1, distance))
+#print(dijkstra(node, 1, distance))

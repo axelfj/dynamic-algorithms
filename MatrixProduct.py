@@ -70,5 +70,4 @@ def matrixproduct(values):
     return matrix[0][cantmatrix-1], associativity
     # Fin matrixproduct
 
-
-print(matrixproduct(Values))
+#print(matrixproduct(Values))
