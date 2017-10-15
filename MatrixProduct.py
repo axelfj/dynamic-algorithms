@@ -17,7 +17,7 @@ def matrixproduct(values):
         return True
 
     def rutas(route):
-        def rutasAux(i, j):
+        def rutas_aux(i, j):
             if route[i][j] == 0 or (route[i][j] == j and j - i == 1):
                 if i == j:
                     lista.append(str(i))
@@ -25,12 +25,12 @@ def matrixproduct(values):
                     lista.append(str(i) + "*" + str(j))
             else:
                 value = route[i][j]
-                rutasAux(i, value - 1)
-                rutasAux(value, j)
-            # Fin rutasAux
+                rutas_aux(i, value - 1)
+                rutas_aux(value, j)
+            # Fin rutas_aux
         lista = []
         cant = len(route)
-        rutasAux(0, cant - 1)
+        rutas_aux(0, cant - 1)
         return lista
     # Fin rutas
 
