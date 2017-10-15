@@ -16,7 +16,6 @@ def creategraph(n):
                 num = randint(1, 101)
                 num //= 2
                 if num >= 46:
-                    print(num)
                     num = inf
                 temp[nodes[i]] = num
         distances[node] = temp
