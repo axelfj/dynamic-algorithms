@@ -2,7 +2,7 @@
 # Output: A list with the nodes used to
 
 from random import *
-
+inf = 99999999
 
 def creategraph(n):
     if n <= 0:
@@ -13,7 +13,11 @@ def creategraph(n):
     for node in nodes:
         for i in range(len(nodes)):
             if nodes[i] != node:
-                temp[nodes[i]] = randint(0, 50)
+                num = randint(1, 101)
+                num //= 2
+                if num >= 46:
+                    num = inf
+                temp[nodes[i]] = num
         distances[node] = temp
         temp = {}
     return nodes, distances
@@ -31,4 +35,4 @@ def graphtomatrix(graph):
     print(matrix)
     return matrix
 
-#print(creategraph(3))
+print(creategraph(3))
