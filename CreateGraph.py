@@ -18,20 +18,5 @@ def creategraph(n):
         temp = {}
     return nodes, distances
 
-# Input: A graph (done with dictionaries)
-# Output: A matrix based on the dictionary
 
-def graphtomatrix(graph):
-    matrix = [[graph[x] for x in range(len(graph))] for x in range(len(graph))]
-    for x in graph:
-        matrix[x][x] = 0
-        for y in graph[x]:
-            matrix[x][y] = graph[x][y]
-    print(matrix)
-    return matrix
-
-
-node, distance = creategraph(3)
-print(distance)
-graphtomatrix(distance)
-
+# print(creategraph(3))
