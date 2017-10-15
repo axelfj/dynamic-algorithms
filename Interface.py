@@ -63,21 +63,29 @@ Button(mainFrame, text='Exit', command=lambda:control.quit()).pack(side=TOP, fil
 Label(mainFrame, text='Thank you for using our program.').pack()
 
 # HelpFrame #
-Label(informationFrame, text='Program created by\n'
+Label(informationFrame, text='Software created by\n'
                              'Brenes Maleaño Andrés Ottón.\n'
                              'Fernández Jiménez Axel Alejandro.\n'
-                             'López Saborio Iván Móises.\n\n'
-                             'Coin change: This algorithm consist in that given a quantity of N coins (different denominations),\n '
-                             'give the coin change with the lowest quantity of coins.\n\n'
-                             'Knapsack: \n\n'
-                             'Floyd: Algorithm used to get the shortest path in a graph.\n\n'
-                             'Dijkstra: Algorithm used to get the shortest path from one node to the others in a graph.\n\n'
-                             'Hanoi Towers: Given a N number of disks, move them from one needle to another one, by just moving\n'
-                             'one disk at the time.\n\n'
+                             'López Saborio Iván Móises.\n\n').pack(side = TOP, fill= X)
+Label(informationFrame, text =
+                             'Coin change: This algorithm consist in give you the minimum coins you need to give an exact ammount of money.\n\n'
+
+                             'Knapsack: Given elements that have weight and a backpack to put them in. We give you\n'
+                             'the most valuable backpack and the elements you have to put into.\n\n'
+
+                             'Floyd: This algorithm finds the shortest path between one way to every other ways.\n\n'
+
+                             'Dijkstra: Dijkstra gives you the shortest path between one way to another point.\n\n'
+
+                             'Hanoi Towers: Given a N number of disks, move them from one tower to another one, by just moving\n'
+                             'one disk at the time, consider that you can only put smaller disk on top.\n\n'
+
                              'Quicksort: Algorithm used to order an array of N number increasingly or decreasingly.\n\n'
+
                              'HeapSort: Algorithm used to order an array of N number increasingly or decreasingly.\n\n'
-                             'Matrix Multiplication: Algorithm that given N matrices of i x j elements, calculate the minimum\n'
-                             ' number of multiplications that have to be done using the best arrange of them associatively.\n\n').pack(side = TOP, fill= X)
+
+                             'Matrix Multiplication: Algorithm that given N matrices of mXn elements, it calculates the minimum\n'
+                             'number of multiplications that have to be done using the best arrange of them associatively.\n\n').pack(side=TOP, fill= X)
 Button(informationFrame, text='Back', command=lambda:raise_frame(informationFrame, mainFrame)).pack(side=TOP, fill=X)
 
 # AlgorithmFrame #
@@ -96,7 +104,7 @@ Label(coinFrame, text='Insert the coin quantity:\n').pack()
 coinQuantity = Entry(coinFrame).pack()
 Label(coinFrame, text='Insert the total value you want to achieve:\n').pack()
 totalInput = Entry(coinFrame).pack()
-Button(coinFrame, text='Execute', command=lambda:print(change(getint(coinQuantity),getint(totalInput)))).pack(side=TOP, fill=X)
+Button(coinFrame, text='Execute', command=lambda:print(minCoins())).pack(side=TOP, fill=X)
 Button(coinFrame, text='Back', command=lambda:raise_frame(coinFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 

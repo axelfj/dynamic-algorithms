@@ -1,5 +1,5 @@
-coins = [1,2,3]
-total = 5
+coins = [1,2,3,4]
+total = 11
 
 def minCoins(coins, total):
     cols = total + 1
@@ -16,9 +16,10 @@ def minCoins(coins, total):
 def selectCoins(R, coins):
     selection = []
     start = len(R) - 1
+    print(R)
     if R[start] == -1:
         return "No Solution Possible."
-    while start != 0:
+    while start >= 0:
         coin = coins[R[start]]
         selection += [coin]
         start = start - coin
