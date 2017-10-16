@@ -16,5 +16,3 @@ def hanoi(height):
             hanoiAux(height - 1, middleTower, initTower, finalTower)
         return initTower, middleTower, finalTower
     return hanoiAux(height,initTower,middleTower,finalTower)
-
-#print(hanoi(15))

@@ -1,5 +1,11 @@
 from random import *
 
+# This algorithm sorts an array of n elements. #
+# Input: Array.
+#   QuickSort use a pivot number and creates two sub-arrays and use the same method until the array is empty.
+# Output: sorted array
+#   QuickSort returns the sorted array.
+
 def randomArray(x):
     array = []
     for i in range(x):
@@ -14,6 +20,3 @@ def quickSort(array):
         leftValues = [x for x in array[1:] if x < pivot]
         rightValues = [x for x in array[1:] if x >= pivot]
         return quickSort(leftValues)+[pivot]+quickSort(rightValues)
-
-array = randomArray(10)
-#print(quickSort(array))

@@ -6,3 +6,5 @@ GUI.py___jb_old___
 .idea/Project-1---Algorythm-Analize.iml
 .idea/workspace.xml
 __pycache__/Backpack_Problem.cpython-34.pyc
+*.pyc
+*.xml

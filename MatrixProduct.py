@@ -6,7 +6,7 @@
 from copy import deepcopy
 
 Values = [[30, 35], [35, 15], [15, 5], [5, 10], [10, 20], [20, 25]]
-# Values = [[2, 3], [3, 6], [6, 4], [4, 5]]
+
 
 def matrixproduct(values):
 
@@ -17,6 +17,7 @@ def matrixproduct(values):
         return True
 
     def rutas(route):
+
         def rutas_aux(i, j):
             if route[i][j] == 0 or (route[i][j] == j and j - i == 1):
                 if i == j:
@@ -27,12 +28,11 @@ def matrixproduct(values):
                 value = route[i][j]
                 rutas_aux(i, value - 1)
                 rutas_aux(value, j)
-            # Fin rutas_aux
+
         lista = []
         cant = len(route)
         rutas_aux(0, cant - 1)
         return lista
-    # Fin rutas
 
     def matrixproductaux(array, i, j, route):
         if i == j:
@@ -43,12 +43,10 @@ def matrixproduct(values):
         for k in range(j - 1, i - 1, -1):
             temp = matrixproductaux(array, i, k, route) + matrixproductaux(array, k + 1, j, route) + \
                    array[i] * array[k + 1] * array[j + 1]
-
             if temp < last:
                 last = temp
                 route[i][j] = k+1
         return last
-        # Fin matrixproductaux
 
     if not multiplicands(values):
         return "Not multiplicands"
@@ -68,6 +66,3 @@ def matrixproduct(values):
     associativity = rutas(routes)
 
     return matrix[0][cantmatrix-1], associativity
-    # Fin matrixproduct
-
-#print(matrixproduct(Values))
