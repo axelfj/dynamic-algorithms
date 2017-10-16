@@ -26,7 +26,7 @@
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Hanoi_Towers.coverage" NAME="Hanoi Towers Coverage Results" MODIFIED="1506387427068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Peso_Mochila.coverage" NAME="Peso_Mochila Coverage Results" MODIFIED="1506185178737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$HanoiTowers.coverage" NAME="HanoiTowers Coverage Results" MODIFIED="1508088452157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Knapsack.coverage" NAME="Knapsack Coverage Results" MODIFIED="1508094100407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Knapsack.coverage" NAME="Knapsack Coverage Results" MODIFIED="1508117107156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$defDuration__1_.coverage" NAME="defDuration (1) Coverage Results" MODIFIED="1508088712394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Backpack_Problem.coverage" NAME="Backpack_Problem Coverage Results" MODIFIED="1508092813740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Quicksort.coverage" NAME="Quicksort Coverage Results" MODIFIED="1506387287499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -46,8 +46,8 @@
       <file leaf-file-name="Knapsack.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Knapsack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+            <state relative-caret-position="397">
+              <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -362,7 +362,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2923674" sideWeight="0.4888889" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2923674" sideWeight="0.4888889" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -720,8 +720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Knapsack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="55" column="20" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+        <state relative-caret-position="397">
+          <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
           <folding />
         </state>
       </provider>
