@@ -34,5 +34,3 @@ def graphtomatrix(graph):
             matrix[x][y] = graph[x][y]
     print(matrix)
     return matrix
-
-print(creategraph(3))

@@ -26,7 +26,3 @@ def dijkstra(nodes, init, distances):
         candidates = [node for node in unvisited.items() if node[1]]
         current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
     return visited,distances
-
-
-node, distance = CG.creategraph(3)
-#print(dijkstra(node, 1, distance))

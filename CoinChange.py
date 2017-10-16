@@ -1,6 +1,3 @@
-total = 11
-coins = [1,5,10,21,25]
-
 # This algorithm search the minimum ammount of coins to give change back #
 # Input: Coins & Change.
 #   Coins is a list with the values of the coins, the change is what you're aiming to reach with the minimum of coins #
@@ -29,5 +26,3 @@ def selectCoins(coinsUsed,total):
         selection += [thisCoin]
         coin -= thisCoin
     return selection
-
-#print(coinChange(coins,total))

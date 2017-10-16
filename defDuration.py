@@ -1,8 +1,6 @@
 import datetime
 import sys
 
-from Knapsack import *
-
 sys.setrecursionlimit(10000)
 
 def medirDuracion(funcion):
@@ -10,6 +8,3 @@ def medirDuracion(funcion):
     funcion()
     tiempoFinal = datetime.datetime.now()
     print("Duración de", funcion.__name__, ":", tiempoFinal - tiempoInicial)
-
-    
-medirDuracion(backpack([1,2,3,4],11))
