@@ -27,15 +27,15 @@ def knapsack(cantProducts, weight):
 
     # Select Products #
     def selectProducts(products, matrix):
-        i = len(matrix) - 1
-        j = len(matrix[0]) - 1
+        i = len(matrix)-1
+        j = len(matrix[0])-1
         selection = []
-        while matrix[i][j] != 0:
-            if matrix[i][j] != matrix[i - 1][j]:
-                if (products[i] + sum(selection)) <= weight:
-                    selection += [products[i]]
-                i -= 1
-            j -= 1
+        while i >= 0 and j >= 0:
+            if matrix[i][j] == matrix[i - 1][j]:
+                i-=1
+            else:
+                selection += [products[i-1]]
+                j -= products[i-1]
         return selection
 
     products = arrayProducts(cantProducts)
@@ -52,6 +52,6 @@ def knapsack(cantProducts, weight):
                 matrix[i][j] = matrix[i - 1][j]
 
 
-    return matrix, matrix[len(values)][weight], values#, selectProducts(products,matrix)
+    return matrix,matrix[len(values)][weight], values, selectProducts(products,matrix)
 
-print(knapsack(3,5))
+#print(knapsack(5,7))
