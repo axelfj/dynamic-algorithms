@@ -10,3 +10,5 @@ __pycache__/Backpack_Problem.cpython-34.pyc
 *.xml
 *.pyc
 .idea/workspace.xml
+*.pyc
+.idea/workspace.xml

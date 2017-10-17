@@ -26,10 +26,11 @@ def creategraph(n):
 # Input: A graph (done with dictionaries)
 # Output: A matrix based on the dictionary
 
-def graphtomatrix(graph):
+def graphToMatrix(graph):
     matrix = [[graph[x] for x in range(len(graph))] for _ in range(len(graph))]
     for x in graph:
         matrix[x][x] = 0
         for y in graph[x]:
             matrix[x][y] = graph[x][y]
     return matrix
+

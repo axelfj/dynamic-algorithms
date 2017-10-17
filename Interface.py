@@ -9,6 +9,8 @@ from HanoiTowers import *
 from HeapSort import *
 from MatrixProduct import *
 from Quicksort import *
+import CreateGraph as CG
+from CreateGraph import*
 
 control = Tk()
 
@@ -134,20 +136,48 @@ Button(shortestpathFrame, text='Back', command=lambda:raise_frame(shortestpathFr
 # floydFrame #
 Label(floydFrame, text='Floyd.\n', font = 20).pack()
 Label(floydFrame, text='Insert how many nodes do you want:\n').pack()
-nodesFloyd = Entry(floydFrame).pack(side = TOP, fill = X)
+nodesFloyd = Entry(floydFrame)
+nodesFloyd.pack(side = TOP, fill = X)
+Button(floydFrame, text='Execute', command=lambda:setFloydValues()).pack(side=TOP, fill=X)
+def setFloydValues():
+    graph = int(nodesFloyd.get())
+    graph = creategraph(graph)
+    graph = graphToMatrix(graph)
+    def clearFrame():
+        result.destroy()
+        cButton.destroy()
+    result = Label(floydFrame, text = floyd(graph))
+    result.pack()
+    cButton = Button(floydFrame, text='Clear', command=lambda:clearFrame())
+    cButton.pack(side=BOTTOM, fill=X)
 Button(floydFrame, text='Back', command=lambda:raise_frame(floydFrame, shortestpathFrame)).pack(side=BOTTOM, fill=X)
 
 # dijkstraFrame #
 Label(dijkstraFrame, text='Dijkstra.\n', font = 20).pack()
 Label(dijkstraFrame, text='Insert how many nodes do you want:\n').pack()
-nodesDijkstra = Entry(dijkstraFrame).pack(side = TOP, fill = X)
+nodesDijkstra = Entry(dijkstraFrame)
+nodesDijkstra.pack(side = TOP, fill = X)
+Label(dijkstraFrame, text='Insert the node you want to start from:\n').pack()
+initDijkstra = Entry(dijkstraFrame)
+initDijkstra.pack(side = TOP, fill = X)
+Button(dijkstraFrame, text='Execute', command=lambda:setDijkstraValues()).pack(side=TOP, fill=X)
+def setDijkstraValues():
+    node,distance = creategraph(int(nodesDijkstra.get()))
+    def clearFrame():
+        result.destroy()
+        cButton.destroy()
+    result = Label(dijkstraFrame, text = dijkstra(node, int(initDijkstra.get()), distance))
+    result.pack()
+    cButton = Button(dijkstraFrame, text='Clear', command=lambda:clearFrame())
+    cButton.pack(side=BOTTOM, fill=X)
 Button(dijkstraFrame, text='Back', command=lambda:raise_frame(dijkstraFrame, shortestpathFrame)).pack(side=BOTTOM, fill=X)
 
 
 # hanoiFrame #
 Label(hanoiFrame, text='Hanoi Towers.\n', font = 20).pack()
 Label(hanoiFrame, text='Insert the towers height:\n').pack()
-heightHanoi = Entry(hanoiFrame).pack(side = TOP, fill = X)
+heightHanoi = Entry(hanoiFrame)
+heightHanoi.pack(side = TOP, fill = X)
 Button(hanoiFrame, text='Back', command=lambda:raise_frame(hanoiFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 
@@ -160,7 +190,8 @@ Button(sortFrame, text='Back', command=lambda:raise_frame(sortFrame, algorithmFr
 # quickSortFrame #
 Label(quickFrame, text='QuickSort.\n', font = 20).pack()
 Label(quickFrame, text='Insert how long the array should be:\n').pack()
-lenQuicksort = Entry(quickFrame).pack(side = TOP, fill = X)
+lenQuicksort = Entry(quickFrame)
+lenQuicksort.pack(side = TOP, fill = X)
 Button(quickFrame, text='Back', command=lambda:raise_frame(quickFrame, sortFrame)).pack(side=BOTTOM, fill=X)
 
 # heapSortFrame #
@@ -172,20 +203,23 @@ Button(heapFrame, text='Back', command=lambda:raise_frame(heapFrame, sortFrame))
 # heapMaxFrame #
 Label(heapMaxFrame, text='Maximum Heap.\n', font = 20).pack()
 Label(heapMaxFrame, text='Insert how long the array should be:\n').pack()
-lenHeapMax = Entry(heapMaxFrame).pack(side = TOP, fill = X)
+lenHeapMax = Entry(heapMaxFrame)
+lenHeapMax.pack(side = TOP, fill = X)
 Button(heapMaxFrame, text='Back', command=lambda:raise_frame(heapMaxFrame, heapFrame)).pack(side=BOTTOM, fill=X)
 
 # heapMinFrame #
 Label(heapMinFrame, text='Minimum Heap.\n', font = 20).pack()
 Label(heapMinFrame, text='Insert how long the array should be:\n').pack()
-lenHeapMin = Entry(heapMinFrame).pack(side = TOP, fill = X)
+lenHeapMin = Entry(heapMinFrame)
+lenHeapMin.pack(side = TOP, fill = X)
 Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFra/me)).pack(side=BOTTOM, fill=X)
 
 
 # matrixFrame #
 Label(matrixFrame, text='N-Matrix Chain Product.\n', font = 20).pack()
-Label(heapMinFrame, text='Insert how many matrix do you want:\n').pack()
-lenHeapMin = Entry(heapMinFrame).pack(side = TOP, fill = X)
+Label(matrixFrame, text='Insert how many matrix do you want:\n').pack()
+valueMatrix = Entry(matrixFrame)
+valueMatrix.pack(side = TOP, fill = X)
 Button(matrixFrame, text='Back', command=lambda:raise_frame(matrixFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 

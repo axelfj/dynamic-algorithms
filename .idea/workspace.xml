@@ -11,10 +11,10 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Coin_Change.coverage" NAME="Coin_Change Coverage Results" MODIFIED="1508035933212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1508201219249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Interface.coverage" NAME="Interface Coverage Results" MODIFIED="1508204389866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$CreateGraph.coverage" NAME="CreateGraph Coverage Results" MODIFIED="1508196491440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Vuelto_Monedas.coverage" NAME="Vuelto_Monedas Coverage Results" MODIFIED="1506202038055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Dijkstra.coverage" NAME="Dijkstra Coverage Results" MODIFIED="1508027472597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$Dijkstra.coverage" NAME="Dijkstra Coverage Results" MODIFIED="1508204324460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1507327324032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$CoinChange.coverage" NAME="CoinChange Coverage Results" MODIFIED="1508197562761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_1___Algorythm_Analize$defDuration.coverage" NAME="defDuration Coverage Results" MODIFIED="1508088516450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../2016/2016 I Sem/Intro-Taller/Código" />
@@ -37,10 +37,10 @@
       <file leaf-file-name="Interface.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="118" column="25" lean-forward="true" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+            <state relative-caret-position="187">
+              <caret line="161" column="39" lean-forward="true" selection-start-line="161" selection-start-column="39" selection-end-line="161" selection-end-column="39" />
               <folding>
-                <element signature="e#514#623#0" expanded="false" />
+                <element signature="e#564#673#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,13 +89,13 @@
         <option value="$PROJECT_DIR$/Quicksort.py" />
         <option value="$PROJECT_DIR$/HanoiTowers.py" />
         <option value="$PROJECT_DIR$/Floyd.py" />
-        <option value="$PROJECT_DIR$/Dijkstra.py" />
         <option value="$PROJECT_DIR$/defDuration.py" />
         <option value="$PROJECT_DIR$/HeapSort.py" />
-        <option value="$PROJECT_DIR$/CreateGraph.py" />
         <option value="$PROJECT_DIR$/CoinChange.py" />
         <option value="$PROJECT_DIR$/Knapsack.py" />
+        <option value="$PROJECT_DIR$/CreateGraph.py" />
         <option value="$PROJECT_DIR$/Interface.py" />
+        <option value="$PROJECT_DIR$/Dijkstra.py" />
       </list>
     </option>
   </component>
@@ -175,24 +175,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Interface">
-    <configuration name="Backpack_Problem" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Project-1---Algorythm-Analize" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\TEC\2017 II Sem\Análisis de Algoritmos\Project-1---Algorythm-Analize\Knapsack.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="CoinChange" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -225,6 +207,24 @@
       <module name="Project-1---Algorythm-Analize" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CreateGraph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Dijkstra" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Project-1---Algorythm-Analize" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dijkstra.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -285,19 +285,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Backpack_Problem" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Knapsack" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Interface" />
-      <item index="3" class="java.lang.String" itemvalue="Python.CoinChange" />
-      <item index="4" class="java.lang.String" itemvalue="Python.CreateGraph" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Knapsack" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Interface" />
+      <item index="2" class="java.lang.String" itemvalue="Python.CoinChange" />
+      <item index="3" class="java.lang.String" itemvalue="Python.CreateGraph" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Dijkstra" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Interface" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Knapsack" />
-        <item index="2" class="java.lang.String" itemvalue="Python.CoinChange" />
-        <item index="3" class="java.lang.String" itemvalue="Python.CreateGraph" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Backpack_Problem" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Dijkstra" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Knapsack" />
+        <item index="3" class="java.lang.String" itemvalue="Python.CoinChange" />
+        <item index="4" class="java.lang.String" itemvalue="Python.CreateGraph" />
       </list>
     </recent_temporary>
   </component>
@@ -347,7 +347,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Interface.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Interface.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -378,7 +390,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#514#623#0" expanded="false" />
+            <element signature="e#564#673#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -625,22 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Floyd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dijkstra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/defDuration.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -648,14 +644,6 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CreateGraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,12 +663,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Floyd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CreateGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="118" column="25" lean-forward="true" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+        <state relative-caret-position="187">
+          <caret line="161" column="39" lean-forward="true" selection-start-line="161" selection-start-column="39" selection-end-line="161" selection-end-column="39" />
           <folding>
-            <element signature="e#514#623#0" expanded="false" />
+            <element signature="e#564#673#0" expanded="false" />
           </folding>
         </state>
       </provider>
