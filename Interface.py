@@ -142,7 +142,7 @@ Button(floydFrame, text='Execute', command=lambda:setFloydValues()).pack(side=TO
 def setFloydValues():
     graph = int(nodesFloyd.get())
     graph = creategraph(graph)
-    graph = graphToMatrix(graph)
+    graph = graphtomatrix(graph)
     def clearFrame():
         result.destroy()
         cButton.destroy()
