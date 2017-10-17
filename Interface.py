@@ -178,6 +178,15 @@ Label(hanoiFrame, text='Hanoi Towers.\n', font = 20).pack()
 Label(hanoiFrame, text='Insert the towers height:\n').pack()
 heightHanoi = Entry(hanoiFrame)
 heightHanoi.pack(side = TOP, fill = X)
+Button(hanoiFrame, text='Execute', command=lambda:setHanoiValues()).pack(side=TOP, fill=X)
+def setHanoiValues():
+    def clearFrame():
+        result.destroy()
+        cButton.destroy()
+    result = Label(hanoiFrame, text = hanoi(int(heightHanoi.get())))
+    result.pack()
+    cButton = Button(hanoiFrame, text='Clear', command=lambda:clearFrame())
+    cButton.pack(side=BOTTOM, fill=X)
 Button(hanoiFrame, text='Back', command=lambda:raise_frame(hanoiFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 
@@ -192,6 +201,8 @@ Label(quickFrame, text='QuickSort.\n', font = 20).pack()
 Label(quickFrame, text='Insert how long the array should be:\n').pack()
 lenQuicksort = Entry(quickFrame)
 lenQuicksort.pack(side = TOP, fill = X)
+def revealTime():
+    return
 Button(quickFrame, text='Back', command=lambda:raise_frame(quickFrame, sortFrame)).pack(side=BOTTOM, fill=X)
 
 # heapSortFrame #
