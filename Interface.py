@@ -11,6 +11,7 @@ from MatrixProduct import *
 from Quicksort import *
 import CreateGraph as CG
 from CreateGraph import*
+from AlgorithmDuration import *
 
 control = Tk()
 
@@ -201,8 +202,16 @@ Label(quickFrame, text='QuickSort.\n', font = 20).pack()
 Label(quickFrame, text='Insert how long the array should be:\n').pack()
 lenQuicksort = Entry(quickFrame)
 lenQuicksort.pack(side = TOP, fill = X)
-def revealTime():
-    return
+Button(quickFrame, text='Execute', command=lambda:revealQuick()).pack(side=TOP, fill=X)
+def revealQuick():
+    def clearFrame():
+        result.destroy()
+        cButton.destroy()
+    array = randomArray(int(lenQuicksort.get()))
+    result = Label(quickFrame, text = sortDuration(quickSort,array))
+    result.pack()
+    cButton = Button(quickFrame, text='Clear', command=lambda:clearFrame())
+    cButton.pack(side=BOTTOM, fill=X)
 Button(quickFrame, text='Back', command=lambda:raise_frame(quickFrame, sortFrame)).pack(side=BOTTOM, fill=X)
 
 # heapSortFrame #
@@ -216,6 +225,16 @@ Label(heapMaxFrame, text='Maximum Heap.\n', font = 20).pack()
 Label(heapMaxFrame, text='Insert how long the array should be:\n').pack()
 lenHeapMax = Entry(heapMaxFrame)
 lenHeapMax.pack(side = TOP, fill = X)
+Button(heapMaxFrame, text='Execute', command=lambda:revealMax()).pack(side=TOP, fill=X)
+def revealMax():
+    def clearFrame():
+        result.destroy()
+        cButton.destroy()
+    array = randomArray(int(lenHeapMax.get()))
+    result = Label(heapMaxFrame, text = sortDuration(maxHeapSort,array))
+    result.pack()
+    cButton = Button(heapMaxFrame, text='Clear', command=lambda:clearFrame())
+    cButton.pack(side=BOTTOM, fill=X)
 Button(heapMaxFrame, text='Back', command=lambda:raise_frame(heapMaxFrame, heapFrame)).pack(side=BOTTOM, fill=X)
 
 # heapMinFrame #
@@ -223,7 +242,17 @@ Label(heapMinFrame, text='Minimum Heap.\n', font = 20).pack()
 Label(heapMinFrame, text='Insert how long the array should be:\n').pack()
 lenHeapMin = Entry(heapMinFrame)
 lenHeapMin.pack(side = TOP, fill = X)
-Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFra/me)).pack(side=BOTTOM, fill=X)
+Button(heapMinFrame, text='Execute', command=lambda:revealMin()).pack(side=TOP, fill=X)
+def revealMin():
+    def clearFrame():
+        result.destroy()
+        cButton.destroy()
+    array = randomArray(int(lenHeapMin.get()))
+    result = Label(heapMinFrame, text = sortDuration(minHeapSort,array))
+    result.pack()
+    cButton = Button(heapMinFrame, text='Clear', command=lambda:clearFrame())
+    cButton.pack(side=BOTTOM, fill=X)
+Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFrame)).pack(side=BOTTOM, fill=X)
 
 
 # matrixFrame #

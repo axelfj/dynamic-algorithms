@@ -8,6 +8,8 @@
 #       - The left children is always 2(<parentPos>+1)
 #       - The right children is always 2(<parentPos>+2)
 
+from random import randint
+
 def randomArray(x):
     array = []
     for i in range(x):
@@ -15,19 +17,18 @@ def randomArray(x):
     return array
 
 # MaxHeap
-def maxHeap(array,lenArray,i):
+def maxHeap(array, lenArray, i):
     parent = i
     leftChild = i*2+1
     rightChild = i*2+2
-    if leftChild < n and array[parent] < array[leftChild]:
+    if leftChild < lenArray and array[parent] < array[leftChild]:
         parent = leftChild
-    if rightChild < n and array[parent] < array[rightChild]:
+    if rightChild < lenArray and array[parent] < array[rightChild]:
         parent = rightChild
     if parent != i:
         array[i],array[parent] = array[parent],array[i]
         maxHeap(array, lenArray, parent)
-def maxHeapSort(elements):
-    array = randomArray(elements)
+def maxHeapSort(array):
     lenArray = len(array)
     for i in range(lenArray, -1, -1):
         maxHeap(array,lenArray,i)
@@ -37,19 +38,18 @@ def maxHeapSort(elements):
     return array
 
 # MinHeap
-def minHeap(array,n,i):
+def minHeap(array, lenArray, i):
     parent = i
     leftChild = i*2+1
     rightChild = i*2+2
-    if leftChild < n and array[parent] > array[leftChild]:
+    if leftChild < lenArray and array[parent] > array[leftChild]:
         parent = leftChild
-    if rightChild < n and array[parent] > array[rightChild]:
+    if rightChild < lenArray and array[parent] > array[rightChild]:
         parent = rightChild
     if parent != i:
         array[i],array[parent] = array[parent],array[i]
         maxHeap(array,len(array), parent)
-def minHeapSort(elements):
-    array = randomArray(elements)
+def minHeapSort(array):
     lenArray = len(array)
     for i in range(lenArray,-1,-1):
         minHeap(array,lenArray,i)

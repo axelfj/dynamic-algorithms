@@ -3,15 +3,19 @@ import sys
 
 sys.setrecursionlimit(10000)
 
+from Quicksort import*
+from HeapSort import*
+from HanoiTowers import *
+
 def sortDuration(function, array):
     beginTime = datetime.datetime.now()
     function(array)
     finalTime = datetime.datetime.now()
-    print("Duración de", funcion.__name__, ":", finalTime - beginTime)
+    return "Duración del algoritmo:\t", finalTime - beginTime
 
 def hanoiDuration(function, height):
     beginTime = datetime.datetime.now()
     function(height)
     finalTime = datetime.datetime.now()
-    print("Duración de", funcion.__name__, ":", finalTime - beginTime)
-
+    print(beginTime,finalTime)
+    return "Duración del algoritmo:\t", finalTime - beginTime
