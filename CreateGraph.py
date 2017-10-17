@@ -4,6 +4,7 @@
 from random import *
 inf = 99999999
 
+
 def creategraph(n):
     if n <= 0:
         return "Ingrese un valor positivo"
@@ -20,7 +21,7 @@ def creategraph(n):
                 temp[nodes[i]] = num
         distances[node] = temp
         temp = {}
-    return nodes, distances
+    return distances
 
 
 # Input: A graph (done with dictionaries)
