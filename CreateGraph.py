@@ -4,7 +4,6 @@
 from random import *
 inf = 99999999
 
-
 def creategraph(n):
     if n <= 0:
         return "Ingrese un valor positivo"
@@ -21,16 +20,17 @@ def creategraph(n):
                 temp[nodes[i]] = num
         distances[node] = temp
         temp = {}
-    return distances
+    return nodes, distances
 
 
 # Input: A graph (done with dictionaries)
 # Output: A matrix based on the dictionary
 
-def graphtomatrix(graph):
+def graphToMatrix(graph):
     matrix = [[graph[x] for x in range(len(graph))] for _ in range(len(graph))]
     for x in graph:
         matrix[x][x] = 0
         for y in graph[x]:
             matrix[x][y] = graph[x][y]
     return matrix
+
