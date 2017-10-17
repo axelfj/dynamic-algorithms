@@ -51,4 +51,6 @@ def knapsack(cantProducts, weight):
             else:
                 matrix[i][j] = matrix[i - 1][j]
 
-    return matrix[len(values)][weight], values, selectProducts(products,matrix)
+    return "The best value you can get from this products is:\t",matrix[len(values)][weight],\
+           "\nThe product values are the following:\t",values,\
+           "\nThe products you should use are the following:\t",selectProducts(products,matrix)
