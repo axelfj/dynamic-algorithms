@@ -26,7 +26,8 @@ def maxHeap(array,lenArray,i):
     if parent != i:
         array[i],array[parent] = array[parent],array[i]
         maxHeap(array, lenArray, parent)
-def maxHeapSort(array):
+def maxHeapSort(elements):
+    array = randomArray(elements)
     lenArray = len(array)
     for i in range(lenArray, -1, -1):
         maxHeap(array,lenArray,i)
@@ -47,7 +48,8 @@ def minHeap(array,n,i):
     if parent != i:
         array[i],array[parent] = array[parent],array[i]
         maxHeap(array,len(array), parent)
-def minHeapSort(array):
+def minHeapSort(elements):
+    array = randomArray(elements)
     lenArray = len(array)
     for i in range(lenArray,-1,-1):
         minHeap(array,lenArray,i)

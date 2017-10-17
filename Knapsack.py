@@ -51,4 +51,4 @@ def knapsack(cantProducts, weight):
             else:
                 matrix[i][j] = matrix[i - 1][j]
 
-    return matrix,matrix[len(values)][weight], values, selectProducts(products,matrix)
+    return matrix[len(values)][weight], values, selectProducts(products,matrix)

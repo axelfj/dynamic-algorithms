@@ -8,3 +8,5 @@ GUI.py___jb_old___
 __pycache__/Backpack_Problem.cpython-34.pyc
 *.pyc
 *.xml
+*.pyc
+.idea/workspace.xml

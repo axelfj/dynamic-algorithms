@@ -6,7 +6,7 @@ inf = 99999999
 
 def creategraph(n):
     if n <= 0:
-        return "Ingrese un valor psitivo"
+        return "Ingrese un valor positivo"
     nodes = [x for x in range(n)]
     distances = {}
     temp = {}
@@ -27,10 +27,9 @@ def creategraph(n):
 # Output: A matrix based on the dictionary
 
 def graphtomatrix(graph):
-    matrix = [[graph[x] for x in range(len(graph))] for x in range(len(graph))]
+    matrix = [[graph[x] for x in range(len(graph))] for _ in range(len(graph))]
     for x in graph:
         matrix[x][x] = 0
         for y in graph[x]:
             matrix[x][y] = graph[x][y]
-    print(matrix)
     return matrix

@@ -1,19 +1,14 @@
 # import all the py algorithms #
 
-from Knapsack import *
+from tkinter import *
 from CoinChange import *
+from Knapsack import *
 from Dijkstra import *
 from Floyd import *
 from HanoiTowers import *
 from HeapSort import *
 from MatrixProduct import *
 from Quicksort import *
-
-
-# import the interface library #
-
-from tkinter import *
-from tkinter import ttk
 
 control = Tk()
 
@@ -24,13 +19,9 @@ control.title('Algorithm Analize Project #1')
 control.minsize(width=800, height=600)
 control.maxsize(width=3840, height=2160)
 
-# Set the background black #
-#control.configure(background = 'black')
-
 def raise_frame(fromFrame,toFrame):
     fromFrame.place(relx=-9, rely=-9, anchor = "center")
     toFrame.place(relx=0.5, rely=0.5, anchor = "center")
-
 
 # First Frames #
 mainFrame = Frame(control)
@@ -69,21 +60,14 @@ Label(informationFrame, text='Software created by\n'
                              'López Saborio Iván Móises.\n\n').pack(side = TOP, fill= X)
 Label(informationFrame, text =
                              'Coin change: This algorithm consist in give you the minimum coins you need to give an exact ammount of money.\n\n'
-
                              'Knapsack: Given elements that have weight and a backpack to put them in. We give you\n'
                              'the most valuable backpack and the elements you have to put into.\n\n'
-
                              'Floyd: This algorithm finds the shortest path between one way to every other ways.\n\n'
-
                              'Dijkstra: Dijkstra gives you the shortest path between one way to another point.\n\n'
-
                              'Hanoi Towers: Given a N number of disks, move them from one tower to another one, by just moving\n'
                              'one disk at the time, consider that you can only put smaller disk on top.\n\n'
-
                              'Quicksort: Algorithm used to order an array of N number increasingly or decreasingly.\n\n'
-
                              'HeapSort: Algorithm used to order an array of N number increasingly or decreasingly.\n\n'
-
                              'Matrix Multiplication: Algorithm that given N matrices of mXn elements, it calculates the minimum\n'
                              'number of multiplications that have to be done using the best arrange of them associatively.\n\n').pack(side=TOP, fill= X)
 Button(informationFrame, text='Back', command=lambda:raise_frame(informationFrame, mainFrame)).pack(side=TOP, fill=X)
@@ -100,16 +84,32 @@ Button(algorithmFrame, text='Back', command=lambda:raise_frame(algorithmFrame, m
 
 
 # coinFrame #
+Label(coinFrame, text='Coin Change Algorithm\n').pack()
 Label(coinFrame, text='Insert the coin quantity:\n').pack()
-coinQuantity = Entry(coinFrame).pack()
+coinQuantity = Entry(coinFrame, text = "Insert how many coins do you have")
+coinQuantity.pack(side = TOP, fill = X)
 Label(coinFrame, text='Insert the total value you want to achieve:\n').pack()
-totalInput = Entry(coinFrame).pack()
-Button(coinFrame, text='Execute', command=lambda:print(minCoins())).pack(side=TOP, fill=X)
-Button(coinFrame, text='Back', command=lambda:raise_frame(coinFrame, algorithmFrame)).pack(side=TOP, fill=X)
+changeInput = Entry(coinFrame)
+changeInput.pack(side = TOP, fill = X)
+
+Button(coinFrame, text='Execute', command=lambda:setChange()).pack(side=TOP, fill=X)
+def setChange():
+    text = Label(coinFrame, text="El resultado con los valores asignados son los siguientes:")
+    text.pack()
+    result = Label(coinFrame, text = coinChange(int(coinQuantity.get()),int(changeInput.get())))
+    result.pack()
+    cButton = Button(coinFrame, text='Clear', command=lambda: clearCoinFrame())
+    cButton.pack(side=BOTTOM, fill=X)
+    def clearCoinFrame():
+        text.destroy()
+        result.destroy()
+        cButton.destroy()
+Button(coinFrame, text='Back', command=lambda:raise_frame(coinFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 
 # knapsackFrame #
-Label(knapsackFrame, text='This is a test.\n').pack()
+Label(knapsackFrame, text='Knapsack Algorithm.\n').pack()
+knapsackInput = Entry(knapsackFrame).pack()
 Button(knapsackFrame, text='Back', command=lambda:raise_frame(knapsackFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 
@@ -155,7 +155,7 @@ Button(heapMaxFrame, text='Back', command=lambda:raise_frame(heapMaxFrame, heapF
 
 # heapMinFrame #
 Label(heapMinFrame, text='Minimum Heap.\n').pack()
-Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFrame)).pack(side=TOP, fill=X)
+Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFra/me)).pack(side=TOP, fill=X)
 
 
 # matrixFrame #

@@ -1,12 +1,27 @@
 # This algorithm search the minimum ammount of coins to give change back #
 # Input: Coins & Change.
-#   Coins is a list with the values of the coins, the change is what you're aiming to reach with the minimum of coins #
+#   Coins is a number, the change is what you're aiming to reach with the minimum of coins #
 # Output: Minimum value & Selection of coins.
 #   The coinChange algorithm searches the minimum value and selectCoins makes the selections of the coins.
 
 def coinChange(coins, change):
-    minCoins = [0] * (total + 1)
-    coinsUsed = [0] * (total + 1)
+
+    def createCoins(coins):
+        arrayCoins = [x for x in range(1,coins+1)]
+        return arrayCoins
+
+    def selectCoins(coinsUsed, total):
+        coin = total
+        selection = []
+        while coin > 0:
+            thisCoin = coinsUsed[coin]
+            selection += [thisCoin]
+            coin -= thisCoin
+        return selection
+
+    coins = createCoins(coins)
+    minCoins = [0] * (change + 1)
+    coinsUsed = [0] * (change + 1)
     for cents in range(change+1):
         coinCount = cents
         newCoin = 1
@@ -16,13 +31,5 @@ def coinChange(coins, change):
                 newCoin = j
         minCoins[cents] = coinCount
         coinsUsed[cents] = newCoin
-    return minCoins[change], selectCoins(coinsUsed,total)
 
-def selectCoins(coinsUsed,total):
-    coin = total
-    selection = []
-    while coin > 0:
-        thisCoin = coinsUsed[coin]
-        selection += [thisCoin]
-        coin -= thisCoin
-    return selection
+    return "La cantidad de monedas es:\t",minCoins[change], "\nLas monedas que debe usar son:\t",selectCoins(coinsUsed,change)
