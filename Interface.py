@@ -76,7 +76,7 @@ Label(informationFrame, text =
 Button(informationFrame, text='Back', command=lambda:raise_frame(informationFrame, mainFrame)).pack(side=TOP, fill=X)
 
 # AlgorithmFrame #
-Label(algorithmFrame, text='Choose your favorite algorithm.').pack()
+Label(algorithmFrame, text='Choose your favorite algorithm').pack()
 Button(algorithmFrame, text='Coin Change', command=lambda:raise_frame(algorithmFrame,coinFrame)).pack(side=TOP, fill=X)
 Button(algorithmFrame, text='Knapsack', command=lambda:raise_frame(algorithmFrame, knapsackFrame)).pack(side=TOP, fill=X)
 Button(algorithmFrame, text='Shortest Path', command=lambda:raise_frame(algorithmFrame,shortestpathFrame)).pack(side=TOP, fill=X)
@@ -107,7 +107,7 @@ Button(coinFrame, text='Back', command=lambda:raise_frame(coinFrame, algorithmFr
 
 
 # knapsackFrame #
-Label(knapsackFrame, text='Knapsack Algorithm.\n', font = 20).pack()
+Label(knapsackFrame, text='Knapsack Algorithm\n', font = 20).pack()
 Label(knapsackFrame, text='Insert how many products do you own:\n').pack()
 cantKnapsack = Entry(knapsackFrame)
 cantKnapsack.pack(side = TOP, fill = X)
@@ -129,13 +129,13 @@ Button(knapsackFrame, text='Back', command=lambda:raise_frame(knapsackFrame, alg
 
 
 # shortestpathFrame #
-Label(shortestpathFrame, text='Choose between Floyd & Dijkstra.\n').pack()
+Label(shortestpathFrame, text='Choose between Floyd & Dijkstra\n').pack()
 Button(shortestpathFrame, text='Floyd', command=lambda:raise_frame(shortestpathFrame, floydFrame)).pack(side=TOP, fill=X)
 Button(shortestpathFrame, text='Dijkstra', command=lambda:raise_frame(shortestpathFrame, dijkstraFrame)).pack(side=TOP, fill=X)
 Button(shortestpathFrame, text='Back', command=lambda:raise_frame(shortestpathFrame, algorithmFrame)).pack(side=TOP, fill=X)
 
 # floydFrame #
-Label(floydFrame, text='Floyd.\n', font = 20).pack()
+Label(floydFrame, text='Floyd\n', font = 20).pack()
 Label(floydFrame, text='Insert how many nodes do you want:\n').pack()
 nodesFloyd = Entry(floydFrame)
 nodesFloyd.pack(side = TOP, fill = X)
@@ -154,7 +154,7 @@ def setFloydValues():
 Button(floydFrame, text='Back', command=lambda:raise_frame(floydFrame, shortestpathFrame)).pack(side=BOTTOM, fill=X)
 
 # dijkstraFrame #
-Label(dijkstraFrame, text='Dijkstra.\n', font = 20).pack()
+Label(dijkstraFrame, text='Dijkstra\n', font = 20).pack()
 Label(dijkstraFrame, text='Insert how many nodes do you want:\n').pack()
 nodesDijkstra = Entry(dijkstraFrame)
 nodesDijkstra.pack(side = TOP, fill = X)
@@ -175,7 +175,7 @@ Button(dijkstraFrame, text='Back', command=lambda:raise_frame(dijkstraFrame, sho
 
 
 # hanoiFrame #
-Label(hanoiFrame, text='Hanoi Towers.\n', font = 20).pack()
+Label(hanoiFrame, text='Hanoi Towers\n', font = 20).pack()
 Label(hanoiFrame, text='Insert the towers height:\n').pack()
 heightHanoi = Entry(hanoiFrame)
 heightHanoi.pack(side = TOP, fill = X)
@@ -192,13 +192,13 @@ Button(hanoiFrame, text='Back', command=lambda:raise_frame(hanoiFrame, algorithm
 
 
 # sortFrame #
-Label(sortFrame, text='Choose between QuickSort & HeapSort.\n').pack()
+Label(sortFrame, text='Choose between QuickSort & HeapSort\n').pack()
 Button(sortFrame, text='QuickSort', command=lambda:raise_frame(sortFrame, quickFrame)).pack(side=TOP, fill=X)
 Button(sortFrame, text='HeapSort', command=lambda:raise_frame(sortFrame, heapFrame)).pack(side=TOP, fill=X)
 Button(sortFrame, text='Back', command=lambda:raise_frame(sortFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 # quickSortFrame #
-Label(quickFrame, text='QuickSort.\n', font = 20).pack()
+Label(quickFrame, text='QuickSort\n', font = 20).pack()
 Label(quickFrame, text='Insert how long the array should be:\n').pack()
 lenQuicksort = Entry(quickFrame)
 lenQuicksort.pack(side = TOP, fill = X)
@@ -215,13 +215,13 @@ def revealQuick():
 Button(quickFrame, text='Back', command=lambda:raise_frame(quickFrame, sortFrame)).pack(side=BOTTOM, fill=X)
 
 # heapSortFrame #
-Label(heapFrame, text='Choose max or min.\n').pack()
+Label(heapFrame, text='Choose max or min\n').pack()
 Button(heapFrame, text='Maximum Heap', command=lambda:raise_frame(heapFrame, heapMaxFrame)).pack(side=TOP, fill=X)
 Button(heapFrame, text='Minimum Heap', command=lambda:raise_frame(heapFrame, heapMinFrame)).pack(side=TOP, fill=X)
 Button(heapFrame, text='Back', command=lambda:raise_frame(heapFrame, sortFrame)).pack(side=BOTTOM, fill=X)
 
 # heapMaxFrame #
-Label(heapMaxFrame, text='Maximum Heap.\n', font = 20).pack()
+Label(heapMaxFrame, text='Maximum Heap\n', font = 20).pack()
 Label(heapMaxFrame, text='Insert how long the array should be:\n').pack()
 lenHeapMax = Entry(heapMaxFrame)
 lenHeapMax.pack(side = TOP, fill = X)
@@ -238,7 +238,7 @@ def revealMax():
 Button(heapMaxFrame, text='Back', command=lambda:raise_frame(heapMaxFrame, heapFrame)).pack(side=BOTTOM, fill=X)
 
 # heapMinFrame #
-Label(heapMinFrame, text='Minimum Heap.\n', font = 20).pack()
+Label(heapMinFrame, text='Minimum Heap\n', font = 20).pack()
 Label(heapMinFrame, text='Insert how long the array should be:\n').pack()
 lenHeapMin = Entry(heapMinFrame)
 lenHeapMin.pack(side = TOP, fill = X)
@@ -256,7 +256,7 @@ Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapF
 
 
 # matrixFrame #
-Label(matrixFrame, text='N-Matrix Chain Product.\n', font = 20).pack()
+Label(matrixFrame, text='N-Matrix Chain Product\n', font = 20).pack()
 Label(matrixFrame, text='Insert how many matrix do you want:\n').pack()
 valueMatrix = Entry(matrixFrame)
 valueMatrix.pack(side = TOP, fill = X)
