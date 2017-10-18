@@ -4,11 +4,21 @@
 # Output: Quantity of multiplications you have to
 
 from copy import deepcopy
+from random import randint
 
-Values = [[30, 35], [35, 15], [15, 5], [5, 10], [10, 20], [20, 25]]
+def matrixproduct(n):
 
+    def createMatrix(n):
+        array = []
+        for i in range(n):
+            array += [[randint(1,49),randint(1,49)]]
 
-def matrixproduct(values):
+        for i in range(n-1):
+            for j in range(2):
+                array[i][1] = array[i+1][0]
+        return array
+
+    values = createMatrix(n)
 
     def multiplicands(matrices):
         for i in range(len(matrices)-1):
@@ -51,6 +61,7 @@ def matrixproduct(values):
     if not multiplicands(values):
         return "Not multiplicands"
 
+
     cantmatrix = len(values)
     matrix = [[0 for j in range(cantmatrix)] for i in range(cantmatrix)]
     routes = deepcopy(matrix)
@@ -65,4 +76,6 @@ def matrixproduct(values):
 
     associativity = rutas(routes)
 
-    return matrix[0][cantmatrix-1], associativity
+    return "Matrix dimensiones are the following:\t", values,\
+           "\nOperation Quantity:\t", matrix[0][cantmatrix-1], \
+           "\nAssociativity:\t",associativity

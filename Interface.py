@@ -96,13 +96,23 @@ changeInput = Entry(coinFrame)
 changeInput.pack(side = TOP, fill = X)
 Button(coinFrame, text='Execute', command=lambda:setCoinValues()).pack(side=TOP, fill=X)
 def setCoinValues():
-    def clearFrame():
+    def clearValues():
         result.destroy()
         cButton.destroy()
-    result = Label(coinFrame, text = coinChange(int(coinQuantity.get()),int(changeInput.get())))
-    result.pack()
-    cButton = Button(coinFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(coinQuantity.get()) < 0 or int(changeInput.get()) < 0:
+        warning = Label(coinFrame, text = "Can't do the algorithm with negative values.\n"
+                                          "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(coinFrame, text='Clear', command=lambda:clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        result = Label(coinFrame, text = coinChange(int(coinQuantity.get()),int(changeInput.get())))
+        result.pack()
+        cButton = Button(coinFrame, text='Clear', command=lambda:clearValues())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(coinFrame, text='Back', command=lambda:raise_frame(coinFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 
@@ -120,10 +130,20 @@ def setKnapsackValues():
     def clearFrame():
         result.destroy()
         cButton.destroy()
-    result = Label(knapsackFrame, text = knapsack(int(cantKnapsack.get()),int(weightKnapsack.get())))
-    result.pack()
-    cButton = Button(knapsackFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(cantKnapsack.get()) < 0 or int(weightKnapsack.get()) < 0:
+        warning = Label(knapsackFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(knapsackFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        result = Label(knapsackFrame, text = knapsack(int(cantKnapsack.get()),int(weightKnapsack.get())))
+        result.pack()
+        cButton = Button(knapsackFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 
 Button(knapsackFrame, text='Back', command=lambda:raise_frame(knapsackFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
@@ -141,16 +161,26 @@ nodesFloyd = Entry(floydFrame)
 nodesFloyd.pack(side = TOP, fill = X)
 Button(floydFrame, text='Execute', command=lambda:setFloydValues()).pack(side=TOP, fill=X)
 def setFloydValues():
-    graph = int(nodesFloyd.get())
-    graph = creategraph(graph)
-    graph = graphToMatrix(graph)
     def clearFrame():
         result.destroy()
         cButton.destroy()
-    result = Label(floydFrame, text = floyd(graph))
-    result.pack()
-    cButton = Button(floydFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(nodesFloyd.get()) < 0:
+        warning = Label(floydFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(floydFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        graph = int(nodesFloyd.get())
+        graph = creategraph(graph)
+        graph = graphToMatrix(graph)
+        result = Label(floydFrame, text = floyd(graph))
+        result.pack()
+        cButton = Button(floydFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(floydFrame, text='Back', command=lambda:raise_frame(floydFrame, shortestpathFrame)).pack(side=BOTTOM, fill=X)
 
 # dijkstraFrame #
@@ -163,14 +193,24 @@ initDijkstra = Entry(dijkstraFrame)
 initDijkstra.pack(side = TOP, fill = X)
 Button(dijkstraFrame, text='Execute', command=lambda:setDijkstraValues()).pack(side=TOP, fill=X)
 def setDijkstraValues():
-    node,distance = creategraph(int(nodesDijkstra.get()))
     def clearFrame():
         result.destroy()
         cButton.destroy()
-    result = Label(dijkstraFrame, text = dijkstra(node, int(initDijkstra.get()), distance))
-    result.pack()
-    cButton = Button(dijkstraFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(nodesDijkstra.get()) < 0:
+        warning = Label(dijkstraFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(dijkstraFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        node,distance = creategraph(int(nodesDijkstra.get()))
+        result = Label(dijkstraFrame, text = dijkstra(node, int(initDijkstra.get()), distance))
+        result.pack()
+        cButton = Button(dijkstraFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(dijkstraFrame, text='Back', command=lambda:raise_frame(dijkstraFrame, shortestpathFrame)).pack(side=BOTTOM, fill=X)
 
 
@@ -184,10 +224,20 @@ def setHanoiValues():
     def clearFrame():
         result.destroy()
         cButton.destroy()
-    result = Label(hanoiFrame, text = hanoi(int(heightHanoi.get())))
-    result.pack()
-    cButton = Button(hanoiFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(heightHanoi.get()) < 0:
+        warning = Label(hanoiFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(hanoiFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        result = Label(hanoiFrame, text = hanoi(int(heightHanoi.get())))
+        result.pack()
+        cButton = Button(hanoiFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(hanoiFrame, text='Back', command=lambda:raise_frame(hanoiFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 
@@ -207,11 +257,21 @@ def revealQuick():
     def clearFrame():
         result.destroy()
         cButton.destroy()
-    array = randomArray(int(lenQuicksort.get()))
-    result = Label(quickFrame, text = sortDuration(quickSort,array))
-    result.pack()
-    cButton = Button(quickFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(lenQuicksort.get()) < 0:
+        warning = Label(quickFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(quickFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        array = randomArray(int(lenQuicksort.get()))
+        result = Label(quickFrame, text = sortDuration(quickSort,array))
+        result.pack()
+        cButton = Button(quickFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(quickFrame, text='Back', command=lambda:raise_frame(quickFrame, sortFrame)).pack(side=BOTTOM, fill=X)
 
 # heapSortFrame #
@@ -230,11 +290,21 @@ def revealMax():
     def clearFrame():
         result.destroy()
         cButton.destroy()
-    array = randomArray(int(lenHeapMax.get()))
-    result = Label(heapMaxFrame, text = sortDuration(maxHeapSort,array))
-    result.pack()
-    cButton = Button(heapMaxFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(lenHeapMax.get()) < 0:
+        warning = Label(heapMaxFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(heapMaxFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        array = randomArray(int(lenHeapMax.get()))
+        result = Label(heapMaxFrame, text = sortDuration(maxHeapSort,array))
+        result.pack()
+        cButton = Button(heapMaxFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(heapMaxFrame, text='Back', command=lambda:raise_frame(heapMaxFrame, heapFrame)).pack(side=BOTTOM, fill=X)
 
 # heapMinFrame #
@@ -247,11 +317,21 @@ def revealMin():
     def clearFrame():
         result.destroy()
         cButton.destroy()
-    array = randomArray(int(lenHeapMin.get()))
-    result = Label(heapMinFrame, text = sortDuration(minHeapSort,array))
-    result.pack()
-    cButton = Button(heapMinFrame, text='Clear', command=lambda:clearFrame())
-    cButton.pack(side=BOTTOM, fill=X)
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(lenHeapMin.get()) < 0:
+        warning = Label(heapMaxFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(heapMaxFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        array = randomArray(int(lenHeapMin.get()))
+        result = Label(heapMinFrame, text = sortDuration(minHeapSort,array))
+        result.pack()
+        cButton = Button(heapMinFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(heapMinFrame, text='Back', command=lambda:raise_frame(heapMinFrame, heapFrame)).pack(side=BOTTOM, fill=X)
 
 
@@ -260,6 +340,25 @@ Label(matrixFrame, text='N-Matrix Chain Product\n', font = 20).pack()
 Label(matrixFrame, text='Insert how many matrix do you want:\n').pack()
 valueMatrix = Entry(matrixFrame)
 valueMatrix.pack(side = TOP, fill = X)
+Button(matrixFrame, text='Execute', command=lambda:revealMatrix()).pack(side=TOP, fill=X)
+def revealMatrix():
+    def clearFrame():
+        result.destroy()
+        cButton.destroy()
+    def clearWarning():
+        warning.destroy()
+        cButton.destroy()
+    if int(valueMatrix.get()) < 0:
+        warning = Label(matrixFrame, text="Can't do the algorithm with negative values.\n"
+                                        "Please press clear and introduce correct values.")
+        warning.pack()
+        cButton = Button(matrixFrame, text='Clear', command=lambda: clearWarning())
+        cButton.pack(side=BOTTOM, fill=X)
+    else:
+        result = Label(matrixFrame, text = matrixproduct(int(valueMatrix.get())))
+        result.pack()
+        cButton = Button(matrixFrame, text='Clear', command=lambda:clearFrame())
+        cButton.pack(side=BOTTOM, fill=X)
 Button(matrixFrame, text='Back', command=lambda:raise_frame(matrixFrame, algorithmFrame)).pack(side=BOTTOM, fill=X)
 
 
