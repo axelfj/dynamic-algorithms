@@ -234,7 +234,7 @@ def setHanoiValues():
         cButton = Button(hanoiFrame, text='Clear', command=lambda: clearWarning())
         cButton.pack(side=BOTTOM, fill=X)
     else:
-        result = Label(hanoiFrame, text = hanoi(int(heightHanoi.get())))
+        result = Label(hanoiFrame, text = hanoiDuration(hanoi,int(heightHanoi.get())))
         result.pack()
         cButton = Button(hanoiFrame, text='Clear', command=lambda:clearFrame())
         cButton.pack(side=BOTTOM, fill=X)

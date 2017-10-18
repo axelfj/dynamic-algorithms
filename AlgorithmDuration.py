@@ -17,5 +17,4 @@ def hanoiDuration(function, height):
     beginTime = datetime.datetime.now()
     function(height)
     finalTime = datetime.datetime.now()
-    print(beginTime,finalTime)
     return "Duración del algoritmo:\t", finalTime - beginTime
