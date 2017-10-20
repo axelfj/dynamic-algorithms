@@ -32,4 +32,4 @@ def coinChange(coins, change):
         minCoins[cents] = coinCount
         coinsUsed[cents] = newCoin
 
-    return "La cantidad de monedas es:\t",minCoins[change], "\nLas monedas que debe usar son:\t",selectCoins(coinsUsed,change)
+    return "The quantity of coins is:\t",minCoins[change], "\nThe coins you should use:\t",selectCoins(coinsUsed,change)

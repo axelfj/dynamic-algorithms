@@ -13,4 +13,4 @@ def floyd(graph):
                 elif graph[i][j] == -1:
                     if graph[i][m] >= 0 and graph[m][j] >= 0:
                         graph[i][j] = graph[i][m] + graph[m][j]
-    return graph
+    return "This are the best values between every node:\t", graph
