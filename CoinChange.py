@@ -29,6 +29,9 @@ def coinChange(coins, change):
             if minCoins[cents-j] + 1 < coinCount:
                 coinCount = minCoins[cents-j]+1
                 newCoin = j
+            print("MinCoins:\t",minCoins)
+            print("CoinsUsed:\t",coinsUsed)
+            print("\n")
         minCoins[cents] = coinCount
         coinsUsed[cents] = newCoin
 
