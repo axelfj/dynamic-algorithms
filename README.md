@@ -11,7 +11,7 @@ Lopez Saborio Iván Móises.
 
 ## Descripción #
 
-Aplicación que permite el registro de usuarios sobre avistamiento de aves en Costa Rica.
+aplicación que utiliza programación dinámica.
 
 ## Instalación
 
