@@ -1,22 +1,9 @@
-# P1-Anal
-Primer proyecto-Análisis De Algoritmos
+# Dynamic Programmation
 
-## Creditos
+## Credits
 
-Brenes Maleaño Andrés Brenes.
+Brenes Maleaño Andrés Brenes
 
-Fernández Jiménez Axel Alejandro.
+Fernández Jiménez Axel Alejandro
 
-Lopez Saborio Iván Móises.
-
-## Descripción #
-
-aplicación que utiliza programación dinámica.
-
-## Instalación
-
-TODO
-
-## Licencia
-
-TODO
+Lopez Saborio Iván Móises
