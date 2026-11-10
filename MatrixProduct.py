@@ -47,7 +47,7 @@ def matrixproduct(n):
     def matrixproductaux(array, i, j, route):
         if i == j:
             return 0
-        last = 100000
+        last = float("inf")
         if i > j:
             return "x"
         for k in range(j - 1, i - 1, -1):
