@@ -48,7 +48,7 @@ def minHeap(array, lenArray, i):
         parent = rightChild
     if parent != i:
         array[i],array[parent] = array[parent],array[i]
-        maxHeap(array,len(array), parent)
+        minHeap(array, lenArray, parent)
 def minHeapSort(array):
     lenArray = len(array)
     for i in range(lenArray,-1,-1):

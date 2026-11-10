@@ -12,7 +12,7 @@ def dijkstra(nodes, init, distances):
     currentDistance = 0
     unvisited[current] = currentDistance
     while True:
-        for neighbour, distance in distances[current].items():
+        for neighbour, distance in distances.get(current, {}).items():
             if neighbour not in unvisited: continue
             newDistance = currentDistance + distance
             if unvisited[neighbour] is None or unvisited[neighbour] > newDistance:
@@ -21,7 +21,9 @@ def dijkstra(nodes, init, distances):
         del unvisited[current]
         if not unvisited:
             break
-        candidates = [node for node in unvisited.items() if node[1]]
-        current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
+        candidates = [node for node in unvisited.items() if node[1] is not None]
+        if not candidates:
+            break  # Remaining vertices are unreachable.
+        current, currentDistance = min(candidates, key=lambda x: x[1])
     return "The nodes you visited are:\t", visited,\
            "\nThe distance between the nodes are:", distances
